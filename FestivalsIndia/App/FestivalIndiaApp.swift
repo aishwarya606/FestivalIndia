@@ -3,9 +3,7 @@ import SwiftUI
 @main
 struct FestivalIndiaApp: App {
 
-    // Container owns the dependency graph for the app's lifetime.
     private let container = DependencyContainer()
-
     @StateObject private var homePresenter: HomePresenter
 
     init() {
@@ -15,9 +13,15 @@ struct FestivalIndiaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView(presenter: homePresenter) { festivalID in
-                container.makeDetailView(for: festivalID)
-            }
+            HomeView(
+                presenter: homePresenter,
+                makeDetailView: { festivalID in
+                    container.makeDetailView(for: festivalID)
+                },
+                makeSettingsView: {
+                    container.makeSettingsView()
+                }
+            )
         }
     }
 }

@@ -1,13 +1,12 @@
 import SwiftUI
 
-// View is generic over any HomePresenting — it never imports HomePresenter directly.
-// This is the D in SOLID at the View layer.
 struct HomeView<P: HomePresenting & ObservableObject>: View {
     @ObservedObject var presenter: P
 
-    // Factory closure: HomeView doesn't know how to build a detail presenter.
-    // The DependencyContainer provides this at wiring time.
     let makeDetailView: (UUID) -> AnyView
+    let makeSettingsView: () -> AnyView
+
+    @State private var showSettings = false
 
     var body: some View {
         NavigationStack {
@@ -15,7 +14,6 @@ struct HomeView<P: HomePresenting & ObservableObject>: View {
                 VStack(alignment: .leading, spacing: 24) {
                     if let next = presenter.viewState.nextFestival {
                         NextFestivalBanner(model: next) {
-                            // Navigate to detail via the factory
                             navigateTo(festivalID: next.festivalID)
                         }
                     }
@@ -28,6 +26,19 @@ struct HomeView<P: HomePresenting & ObservableObject>: View {
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Indian Festivals 🇮🇳")
             .searchable(text: searchBinding, prompt: "Search festivals…")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Image(systemName: presenter.viewState.notificationsEnabled ? "bell.fill" : "bell")
+                            .foregroundStyle(presenter.viewState.notificationsEnabled ? .orange : .primary)
+                    }
+                }
+            }
+            .sheet(isPresented: $showSettings) {
+                makeSettingsView()
+            }
             .onAppear { presenter.onAppear() }
         }
     }
@@ -81,7 +92,6 @@ struct HomeView<P: HomePresenting & ObservableObject>: View {
         )
     }
 
-    // NavigationLink programmatic trigger — wraps the factory view
     private func navigateTo(festivalID: UUID) -> some View {
         makeDetailView(festivalID)
     }
