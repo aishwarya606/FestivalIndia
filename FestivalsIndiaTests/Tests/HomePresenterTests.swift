@@ -1,5 +1,5 @@
 import XCTest
-@testable import FestivalIndia
+@testable import FestivalsIndia
 
 @MainActor
 final class HomePresenterTests: XCTestCase {

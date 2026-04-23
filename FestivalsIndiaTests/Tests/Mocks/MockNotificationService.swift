@@ -1,5 +1,5 @@
 import UserNotifications
-@testable import FestivalIndia
+@testable import FestivalsIndia
 
 // L: Drop-in for NotificationServiceProtocol. No real UNUserNotificationCenter calls.
 final class MockNotificationService: NotificationServiceProtocol {

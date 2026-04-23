@@ -14,13 +14,6 @@
 			remoteGlobalIDString = 2F2AA68F2F9A191A00AD2EBD;
 			remoteInfo = FestivalsIndia;
 		};
-		2F2AA6A82F9A191C00AD2EBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F2AA6882F9A191A00AD2EBD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F2AA68F2F9A191A00AD2EBD;
-			remoteInfo = FestivalsIndia;
-		};
 		2F2AA71B2F9A1A4000AD2EBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2F2AA6882F9A191A00AD2EBD /* Project object */;
@@ -33,8 +26,8 @@
 /* Begin PBXFileReference section */
 		2F2AA6902F9A191A00AD2EBD /* FestivalsIndia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestivalsIndia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2AA69D2F9A191C00AD2EBD /* FestivalsIndiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestivalsIndiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F2AA6A72F9A191C00AD2EBD /* FestivalsIndiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestivalsIndiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2AA7172F9A1A4000AD2EBD /* FestivalsIndiaTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestivalsIndiaTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F2AA78B2F9A2BAF00AD2EBD /* FestivalsIndia.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FestivalsIndia.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -65,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F2AA6A42F9A191C00AD2EBD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2F2AA7142F9A1A4000AD2EBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +71,7 @@
 		2F2AA6872F9A191A00AD2EBD = {
 			isa = PBXGroup;
 			children = (
+				2F2AA78B2F9A2BAF00AD2EBD /* FestivalsIndia.xctestplan */,
 				2F2AA6922F9A191A00AD2EBD /* FestivalsIndia */,
 				2F2AA7182F9A1A4000AD2EBD /* FestivalsIndiaTests */,
 				2F2AA6912F9A191A00AD2EBD /* Products */,
@@ -96,7 +83,6 @@
 			children = (
 				2F2AA6902F9A191A00AD2EBD /* FestivalsIndia.app */,
 				2F2AA69D2F9A191C00AD2EBD /* FestivalsIndiaTests.xctest */,
-				2F2AA6A72F9A191C00AD2EBD /* FestivalsIndiaUITests.xctest */,
 				2F2AA7172F9A1A4000AD2EBD /* FestivalsIndiaTest.xctest */,
 			);
 			name = Products;
@@ -147,26 +133,6 @@
 			productReference = 2F2AA69D2F9A191C00AD2EBD /* FestivalsIndiaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2F2AA6A62F9A191C00AD2EBD /* FestivalsIndiaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F2AA6B72F9A191C00AD2EBD /* Build configuration list for PBXNativeTarget "FestivalsIndiaUITests" */;
-			buildPhases = (
-				2F2AA6A32F9A191C00AD2EBD /* Sources */,
-				2F2AA6A42F9A191C00AD2EBD /* Frameworks */,
-				2F2AA6A52F9A191C00AD2EBD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2F2AA6A92F9A191C00AD2EBD /* PBXTargetDependency */,
-			);
-			name = FestivalsIndiaUITests;
-			packageProductDependencies = (
-			);
-			productName = FestivalsIndiaUITests;
-			productReference = 2F2AA6A72F9A191C00AD2EBD /* FestivalsIndiaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		2F2AA7162F9A1A4000AD2EBD /* FestivalsIndiaTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F2AA71D2F9A1A4000AD2EBD /* Build configuration list for PBXNativeTarget "FestivalsIndiaTest" */;
@@ -207,10 +173,6 @@
 						CreatedOnToolsVersion = 26.4;
 						TestTargetID = 2F2AA68F2F9A191A00AD2EBD;
 					};
-					2F2AA6A62F9A191C00AD2EBD = {
-						CreatedOnToolsVersion = 26.4;
-						TestTargetID = 2F2AA68F2F9A191A00AD2EBD;
-					};
 					2F2AA7162F9A1A4000AD2EBD = {
 						CreatedOnToolsVersion = 26.4;
 						TestTargetID = 2F2AA68F2F9A191A00AD2EBD;
@@ -233,7 +195,6 @@
 			targets = (
 				2F2AA68F2F9A191A00AD2EBD /* FestivalsIndia */,
 				2F2AA69C2F9A191C00AD2EBD /* FestivalsIndiaTests */,
-				2F2AA6A62F9A191C00AD2EBD /* FestivalsIndiaUITests */,
 				2F2AA7162F9A1A4000AD2EBD /* FestivalsIndiaTest */,
 			);
 		};
@@ -248,13 +209,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2F2AA69B2F9A191C00AD2EBD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F2AA6A52F9A191C00AD2EBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,13 +239,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F2AA6A32F9A191C00AD2EBD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2F2AA7132F9A1A4000AD2EBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,11 +253,6 @@
 			isa = PBXTargetDependency;
 			target = 2F2AA68F2F9A191A00AD2EBD /* FestivalsIndia */;
 			targetProxy = 2F2AA69E2F9A191C00AD2EBD /* PBXContainerItemProxy */;
-		};
-		2F2AA6A92F9A191C00AD2EBD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2F2AA68F2F9A191A00AD2EBD /* FestivalsIndia */;
-			targetProxy = 2F2AA6A82F9A191C00AD2EBD /* PBXContainerItemProxy */;
 		};
 		2F2AA71C2F9A1A4000AD2EBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -545,44 +487,6 @@
 			};
 			name = Release;
 		};
-		2F2AA6B82F9A191C00AD2EBD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aishwarya.FestivalsIndiaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FestivalsIndia;
-			};
-			name = Debug;
-		};
-		2F2AA6B92F9A191C00AD2EBD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aishwarya.FestivalsIndiaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FestivalsIndia;
-			};
-			name = Release;
-		};
 		2F2AA71E2F9A1A4000AD2EBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -649,15 +553,6 @@
 			buildConfigurations = (
 				2F2AA6B52F9A191C00AD2EBD /* Debug */,
 				2F2AA6B62F9A191C00AD2EBD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2F2AA6B72F9A191C00AD2EBD /* Build configuration list for PBXNativeTarget "FestivalsIndiaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F2AA6B82F9A191C00AD2EBD /* Debug */,
-				2F2AA6B92F9A191C00AD2EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

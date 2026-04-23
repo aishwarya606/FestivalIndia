@@ -1,0 +1,47 @@
+{
+  "configurations" : [
+    {
+      "id" : "755D8F8E-EC84-44F0-B100-A3174D99AF54",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FestivalsIndia.xcodeproj",
+      "identifier" : "2F2AA68F2F9A191A00AD2EBD",
+      "name" : "FestivalsIndia"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FestivalsIndia.xcodeproj",
+        "identifier" : "2F2AA69C2F9A191C00AD2EBD",
+        "name" : "FestivalsIndiaTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FestivalsIndia.xcodeproj",
+        "identifier" : "2F2AA6A62F9A191C00AD2EBD",
+        "name" : "FestivalsIndiaUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FestivalsIndia.xcodeproj",
+        "identifier" : "2F2AA7162F9A1A4000AD2EBD",
+        "name" : "FestivalsIndiaTest"
+      }
+    }
+  ],
+  "version" : 1
+}
